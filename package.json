@@ -1,0 +1,25 @@
+{
+  "name": "apiai-messesinfo",
+  "description": "Recherche sur messesinfo par api",
+  "version": "0.0.1",
+  "private": true,
+  "license": "Apache Version 2.0",
+  "author": "Patrice de Saint Steban",
+  "engines": {
+    "node": "6.9.1"
+  },
+  "scripts": {
+    "lint": "semistandard --fix \"**/*.js\"",
+    "start": "functions start",
+    "deploy": "gcloud beta functions deploy messesinfo --trigger-http --stage-bucket messesinfo-apiai"
+  },
+  "dependencies": {
+    "actions-on-google": "^1.0.0",
+    "moment": "^2.18.1",
+    "node-fetch": "^1.7.1"
+  },
+  "devDependencies": {
+    "@google-cloud/functions-emulator": "^0.4.0",
+    "semistandard": "^9.1.0"
+  }
+}
